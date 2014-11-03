@@ -1,0 +1,21 @@
+Funsãns do Sistema
+
+Sistema de estacionamento em C
+
+- Menu inicial
+
+- Cadastro
+	- placa
+	- hora entrada
+	- hora saída
+	- vagas
+	
+
+- Tarifação para a primeira hora e outro valor para as demais horas
+
+- emissão de recibo ao entrar (hora entrada, placa)
+
+- emissão de recibo ao sair (recibo entrada + hora saída, total a pagar)
+
+
+- fechamento do caixa (movimentações + total de mãnei (dinheiro, bufunfa))
