@@ -1,58 +1,85 @@
 /*
-Algoritmo para calcular o valor a ser pago por perÌodo de permanencia de um automÛvel 
+Algoritmo para calcular o valor a ser pago por per√≠odo de permanencia de um autom√≥vel
 em um estacionamento. O operador entra com o s seguintes dados:
 
-Hora (HRE) e minutos (MNE) de entrada
-Hora (HRS) e minutos (MNS) de saÌda
+HoraEnt e MinEnt de entrada
+HoraSaida e MinSaida de sa√≠da
 
-A hora cheia cobrada pelo estaconamento È de R$ 4,00 e passando 1 minuto, 
-È cobrada a segunda hora cheia.
+A hora cheia cobrada pelo estaconamento √© de R$ 4,00 e passando 1 minuto,
+√© cobrada a segunda hora cheia.
 
 ### Tarifas ###
 
 Segue abaixo tarifas cobradas por hora:
-1 hora=R$ 4,00
-2 horas= R$4,00+R$ 2,00
-Acima de 2 horas= adicional de R$ 1,00
+1 hora = R$ 4,00
+horas adicionais = adicional de R$ 2,00
 
-OBS: Utilizar somente n˙meros Inteiros
+
+OBS: Utilizar somente n√∫meros Inteiros
 
 */
 
+//#include <conio.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
 #include <math.h>
 
 
 int main(){
-// DefiniÁ„o das vari·veis
-   
-	int  menu, ContVeic;
-	
-	// Vari·veis de hora 
-    int HoraEnt, MinEnt, HoraSaida, MinSaida, HoraTotal, MinTotal;
-    
-    
+// Defini√ß√£o das vari√°veis
+
+	//int ContVeic;
+
+	// Vari√°veis de hora
+    //int HoraEnt, MinEnt, HoraSaida, MinSaida, HoraTotal, MinTotal;
+
+
     //V5=1, REST1, REST2, REST3, REST4, VALOR_PAGAR;
-	
+
     //float V1, V2, V3, V4;
 	//double  placa;
-    
-    char sair = 'A';
-	while(sair != 'X'){
+
+    char menu[2];
+	int opcao;
+
+	do {
 		//Menu Inicial
-		printf ("===== New Park =====\n\n");
-    	printf ("\n Menu inicial \n 1 - Entrada de veÌculos \n 2 - Saida de veÌculos \n X - Sair do Programa \n");
- 		printf ("\nDigite a opcao requerida: ");
-		scanf ("%d", &menu);
-	
-		if ((menu < 1) || (menu > 3));
-		   menu = atoi(menu);
-		   printf("Opcao invalida\n");
-           system("cls");
-		   continue;
-		
-        return 0;
-	}
+		printf ("\n\n===== New Park =====\n\n");
+    	printf ("\n Menu inicial \n 1 - Entrada de ve√≠culos \n 2 - Saida de ve√≠culos \n\n 0 - Sair do programa");
+ 		printf ("\nDigite a op√ß√£o requerida: ");
+		scanf ("%2s", &menu[0]);
+		opcao = atoi(&menu[0]);
+
+		switch(opcao){
+
+			case 0:
+
+
+				printf ("Finalizando...\n");
+				printf ("Pressione qualquer tecla para continuar...");
+				getchar();
+				getchar();
+				break;
+
+			case 1:
+				printf("Processa entradas...");
+				break;
+
+			case 2:
+				printf("Processa saidas....");
+				break;
+
+
+			default:
+				system("clear");
+				printf("\n===============");
+				printf("\n\nOpcao inv√°lida!");
+				printf("\n\n===============\n");
+				break;
+		}
+
+	 } while (opcao !=0);
+
+
+	return 0;
 }
